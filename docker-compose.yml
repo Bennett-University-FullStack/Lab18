@@ -1,0 +1,12 @@
+version: '2'
+services:
+  your-app:
+    build: .
+    ports:
+      - "9080:9080"
+    restart: always
+    container_name: app_container
+    volumes:
+      - /path/to/your/code/src:/usr/src/app/src
+    environment:
+      - SERVER_PORT=9080
